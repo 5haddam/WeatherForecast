@@ -17,12 +17,6 @@ function weatherForecast() {
   form.append(placeInput, button);
   header.append(form);
   
-  window.addEventListener("load", async (e) => { // REMOVE
-    const city = 'london';
-    const { weatherData, currentTime } = await fetchWeatherAndTime(city);
-    renderWeather(weatherData, currentTime);
-  });
-  
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const city = placeInput.value;
